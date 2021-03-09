@@ -32,7 +32,7 @@ print("IP is {}".format(ip))
 
 if ip != last_ip:
     # This needs an absolute path to `lexicon` in order to run from cron
-    result = os.popen("/Users/maurer/opt/anaconda3/bin/lexicon hover update smaur.io A --name paris-dynamic --content {} --auth-username my-username --auth-password my-password".format(ip)).read() 
+    result = os.popen("/Users/maurer/opt/anaconda3/bin/lexicon hover update smaur.io A --name paris --content {} --auth-username my-username --auth-password my-password".format(ip)).read() 
     
     if ('True' in result):
         print("DNS A-record updated")
